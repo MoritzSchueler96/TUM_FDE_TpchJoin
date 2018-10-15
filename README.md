@@ -14,10 +14,19 @@ and other IDEs.
 
 Building from Terminal:
 Start in the project directory.
+To create a build for debugging:
 ```
 mkdir -p build/debug
 cd build/debug
 cmake -DCMAKE_BUILD_TYPE=Debug ../..
+make
+```
+
+To create a build for performance measurements:
+```
+mkdir -p build/release
+cd build/release
+cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo ../..
 make
 ```
 
