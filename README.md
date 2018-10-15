@@ -22,7 +22,7 @@ cmake -DCMAKE_BUILD_TYPE=Debug ../..
 make
 ```
 
-To create a build for performance measurements:
+To create a build for performance measurements, start in the project directory:
 ```
 mkdir -p build/release
 cd build/release
