@@ -19,13 +19,10 @@ int64_t sum_extendedprice(const std::string& file_name) {
     int64_t price_sum = 0;
     uint64_t field_number = 0;
     for (auto row : lineitem) {
-        for (const auto& field : row) {
-            //-- TODO exercise 2.5
-            // your code goes here
-            //--
-        }
+        //-- TODO exercise sheet 2 Task 4.2
+        // your code goes here
+        //--
     }
-
     return price_sum;
 }
 
