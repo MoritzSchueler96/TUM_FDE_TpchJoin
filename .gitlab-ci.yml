@@ -8,7 +8,7 @@ test:
         - cd build/debug
         - cmake -DCMAKE_BUILD_TYPE=Debug ../..
         - make -j8
-        - ./test_all
+        - ASAN_OPTIONS=detect_leaks=0 ./test_all
     cache:
         key: "$CI_JOB_STAGE-$CI_COMMIT_REF_NAME"
         paths:
