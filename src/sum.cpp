@@ -8,7 +8,12 @@ using namespace aria::csv;
 
 int64_t ToInt(std::string_view s) {
     int64_t result = 0;
-    for (auto c : s) result = result * 10 + (c - '0');
+    for (auto c : s)
+        if (c != '.')  // Skip the dot.
+            result = result * 10 + (c - '0');
+    // Skipping the dot relies on the formatting that there are exactly two
+    // digits after the decimal point. Luckily, this is the case in our input
+    // file.
     return result;
 }
 
